@@ -1,2 +1,3 @@
-# ola_mundo
- Estudos
+# Olá, Mundo!!!
+
+Retomada de estudos sobre Git e GitHub!!!
