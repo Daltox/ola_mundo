@@ -9,9 +9,10 @@ $app = AppFactory::create();
 
 $app->setBasePath('/ola_mundo');
 
-$app->get('/', function (Request $request, Response $response, $args) {
-    $response->getBody()->write("Hello world!");
-    return $response;
+$app->get('/', function (Request $request, Response $response, array $args) {
+    $payload = json_encode(['hello' => 'world'], JSON_PRETTY_PRINT);
+    $response->getBody()->write($payload);
+    return $response->withHeader('Content-Type', 'application/json');
 });
 
 $app->run();
